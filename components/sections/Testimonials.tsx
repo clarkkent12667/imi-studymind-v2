@@ -7,10 +7,10 @@ import { useState } from 'react'
 export default function Testimonials() {
   const testimonials = [
     {
-      name: 'Tania Al-Mahmoud',
+      name: 'Tania',
       age: 17,
       camp: 'International Relations Camp',
-      quote: 'Study Mind opened my eyes to a career I never knew existed. The experience at UCL and visiting the Foreign Office was incredible. I made friends from around the world and now I know exactly what I want to study at university.',
+      quote: 'I absolutely loved this programme! Learning about diplomacy, cybersecurity and global issues really opened my eyes — and visiting the Houses of Parliament made it all seem so real. I would recommend it to anyone interested in politics!',
       image: '👩‍🎓',
       rating: 5,
     },

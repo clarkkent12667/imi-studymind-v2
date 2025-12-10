@@ -8,7 +8,7 @@ export default function Benefits() {
     {
       icon: Briefcase,
       title: 'Experience Your Future Career',
-      description: 'Visit top firms like EY, Lloyds, and Linklaters. Participate in hands-on workshops and gain real-world experience in your chosen field.',
+      description: 'Visit top firms like EY, Lloyds, Legal Chambers, and Kings College Hospital. Participate in hands-on workshops and gain real-world experience in your chosen field.',
     },
     {
       icon: Shield,

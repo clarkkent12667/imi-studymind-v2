@@ -15,7 +15,7 @@ export default function ExperienceShowcase() {
       day: 'Days 2-3',
       icon: Building2,
       title: 'Industry Immersion',
-      description: 'Visit leading firms like EY, Lloyds, and Linklaters. Participate in professional workshops and meet industry experts in your chosen field.',
+      description: 'Visit leading firms like EY, Lloyds, Legal Chambers, and Kings College Hospital. Participate in professional workshops and meet industry experts in your chosen field.',
     },
     {
       day: 'Days 4-5',

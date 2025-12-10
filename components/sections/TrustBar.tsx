@@ -7,11 +7,9 @@ export default function TrustBar() {
     'UCL',
     'EY',
     'Lloyds Banking Group',
-    'Linklaters',
-    'Microsoft',
-    'Goldman Sachs',
-    'McKinsey & Company',
-    'NHS',
+    'Legal Chambers',
+    'Kings College Hospital',
+    'Royal Courts of Justice',
   ]
 
   return (
