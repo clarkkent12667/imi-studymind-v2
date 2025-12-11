@@ -34,7 +34,7 @@ export default function Footer() {
                 />
               </div>
             </div>
-            <p className="text-sm sm:text-base text-white/80">
+            <p className="text-xs sm:text-sm md:text-base text-white/80 break-words">
               Transforming futures through elite career education experiences at UCL London.
             </p>
           </div>
@@ -102,7 +102,7 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-3 text-white/80 justify-center sm:justify-start">
                 <MapPin className="w-5 h-5 flex-shrink-0 mt-0.5" />
-                <span>Gold & Diamond Park<br />Dubai, UAE</span>
+                <span className="break-words">Gold & Diamond Park<br />Dubai, UAE</span>
               </li>
             </ul>
           </div>
@@ -110,7 +110,7 @@ export default function Footer() {
           {/* Column 4: Social (if needed) */}
           <div className="text-center sm:text-left">
             <h3 className="text-base sm:text-lg font-bold mb-4">Follow Us</h3>
-            <p className="text-sm text-white/80">
+            <p className="text-xs sm:text-sm text-white/80 break-words">
               Stay connected with Improve ME Institute and Study Mind for the latest updates and opportunities.
             </p>
           </div>

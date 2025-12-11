@@ -72,10 +72,10 @@ export default function KeySellingPoints() {
                 <div className="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center mb-4">
                   <Icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-lg sm:text-xl font-bold text-blue-700 mb-3">
+                <h3 className="text-lg sm:text-xl font-bold text-blue-700 mb-3 break-words">
                   {point.title}
                 </h3>
-                <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+                <p className="text-sm sm:text-base text-gray-600 leading-relaxed break-words">
                   {point.description}
                 </p>
               </motion.div>

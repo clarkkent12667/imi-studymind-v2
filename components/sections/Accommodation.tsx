@@ -84,7 +84,7 @@ export default function Accommodation() {
                   <div className="w-10 h-10 sm:w-12 sm:h-12 flex-shrink-0 bg-gradient-to-br from-red-600 to-blue-700 rounded-lg flex items-center justify-center">
                     <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                   </div>
-                  <p className="text-base sm:text-lg text-gray-700 pt-1 sm:pt-2">
+                  <p className="text-sm sm:text-base md:text-lg text-gray-700 pt-1 sm:pt-2 break-words">
                     {feature.text}
                   </p>
                 </motion.div>

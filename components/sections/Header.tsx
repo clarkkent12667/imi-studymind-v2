@@ -35,19 +35,19 @@ export default function Header() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 md:h-20">
             {/* Logos - Responsive sizing */}
-            <div className="flex items-center gap-2 sm:gap-3 md:gap-4 flex-shrink-0">
+            <div className="flex items-center gap-1 sm:gap-2 md:gap-4 flex-shrink-0 min-w-0">
               <img 
                 src="/IMI Logo - Booklets.png" 
                 alt="Improve ME Institute Logo" 
-                className="h-8 sm:h-10 md:h-12 w-auto"
+                className="h-6 sm:h-8 md:h-12 w-auto flex-shrink-0"
               />
-              <span className="text-gray-500 text-xs sm:text-sm font-medium hidden sm:inline">
+              <span className="text-gray-500 text-[10px] sm:text-xs md:text-sm font-medium hidden sm:inline whitespace-nowrap">
                 in collaboration with
               </span>
               <img 
                 src="/study-mind-png-long-logo.png" 
                 alt="Study Mind Logo" 
-                className="h-8 sm:h-10 md:h-12 w-auto"
+                className="h-6 sm:h-8 md:h-12 w-auto flex-shrink-0 max-w-[100px] sm:max-w-[120px] md:max-w-none"
               />
             </div>
 

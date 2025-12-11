@@ -22,9 +22,10 @@ export default function TrustBar() {
           transition={{ duration: 0.6 }}
           className="text-center mb-6 sm:mb-8"
         >
-          <p className="text-sm sm:text-base md:text-lg text-gray-600 font-medium px-4">
-            Trusted by <span className="font-bold text-blue-700">200+ schools worldwide</span> | 
-            <span className="font-bold text-blue-700"> 45,000+ hours</span> of 1:1 tuition delivered
+          <p className="text-xs sm:text-sm md:text-base lg:text-lg text-gray-600 font-medium px-2 sm:px-4 break-words">
+            Trusted by <span className="font-bold text-blue-700">200+ schools worldwide</span>{' '}
+            <span className="hidden sm:inline">|</span>{' '}
+            <span className="block sm:inline"><span className="font-bold text-blue-700">45,000+ hours</span> of 1:1 tuition delivered</span>
           </p>
         </motion.div>
 

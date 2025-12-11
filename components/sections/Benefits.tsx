@@ -59,10 +59,10 @@ export default function Benefits() {
                     <Icon className="w-6 h-6 md:w-8 md:h-8 text-white" />
                   </div>
                 </div>
-                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-700 mb-3 md:mb-4 text-center">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-700 mb-3 md:mb-4 text-center break-words">
                   {benefit.title}
                 </h3>
-                <p className="text-sm sm:text-base text-gray-600 leading-relaxed text-center">
+                <p className="text-sm sm:text-base text-gray-600 leading-relaxed text-center break-words">
                   {benefit.description}
                 </p>
               </motion.div>

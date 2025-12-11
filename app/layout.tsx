@@ -13,6 +13,11 @@ export const metadata: Metadata = {
     shortcut: '/study mind favicon.png',
     apple: '/study mind favicon.png',
   },
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 5,
+  },
   openGraph: {
     title: 'Transform Your Future at UCL London',
     description: 'Elite Summer Career Camps for Ambitious Students | Ages 12-18',

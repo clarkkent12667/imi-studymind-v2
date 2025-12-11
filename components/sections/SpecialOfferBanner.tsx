@@ -35,14 +35,14 @@ export default function SpecialOfferBanner() {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-3 md:py-4">
             <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
               {/* Text content - stacks on mobile */}
-              <div className="flex items-center gap-2 sm:gap-3 flex-1 text-center sm:text-left">
+              <div className="flex items-center gap-2 sm:gap-3 flex-1 text-center sm:text-left min-w-0">
                 <Tag className="w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0 hidden sm:block" />
-                <div className="flex-1">
-                  <p className="font-bold text-sm sm:text-base md:text-lg">
+                <div className="flex-1 min-w-0">
+                  <p className="font-bold text-xs sm:text-sm md:text-base lg:text-lg break-words">
                     Exclusive for Improve ME Institute Students: Save AED 440 (£120)
                   </p>
-                  <p className="text-xs sm:text-sm text-white/90 mt-1">
-                    Use code <span className="font-bold bg-white text-red-600 px-2 py-0.5 rounded">IMPROVEME120</span> at checkout
+                  <p className="text-[10px] sm:text-xs md:text-sm text-white/90 mt-1 break-words">
+                    Use code <span className="font-bold bg-white text-red-600 px-1.5 sm:px-2 py-0.5 rounded whitespace-nowrap">IMPROVEME120</span> at checkout
                   </p>
                 </div>
               </div>

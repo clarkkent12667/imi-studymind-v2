@@ -21,10 +21,10 @@ export default function FinalCTA() {
           transition={{ duration: 0.8 }}
           className="text-center max-w-4xl mx-auto"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 md:mb-6 break-words px-2">
             Ready to Transform Your Summer?
           </h2>
-          <p className="text-lg sm:text-xl md:text-2xl text-white/90 mb-8 md:mb-12 px-4">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 mb-8 md:mb-12 px-4 break-words">
             Join students from 50+ nations for the experience of a lifetime. Limited spots available.
           </p>
 

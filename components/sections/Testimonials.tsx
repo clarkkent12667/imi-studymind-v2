@@ -68,7 +68,7 @@ export default function Testimonials() {
               ))}
             </div>
 
-            <blockquote className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed mb-6 md:mb-8 italic">
+            <blockquote className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed mb-6 md:mb-8 italic break-words">
               "{testimonials[activeIndex].quote}"
             </blockquote>
 

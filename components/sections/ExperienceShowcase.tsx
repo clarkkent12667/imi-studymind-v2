@@ -72,10 +72,10 @@ export default function ExperienceShowcase() {
                     <div className="text-xs sm:text-sm font-bold text-red-600 mb-2">
                       {item.day}
                     </div>
-                    <h3 className="text-xl sm:text-2xl font-bold text-blue-700 mb-3">
+                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-700 mb-3 break-words">
                       {item.title}
                     </h3>
-                    <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+                    <p className="text-sm sm:text-base text-gray-600 leading-relaxed break-words">
                       {item.description}
                     </p>
                   </div>

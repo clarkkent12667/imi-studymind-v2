@@ -74,8 +74,8 @@ export default function CareerPathways() {
           </p>
         </motion.div>
 
-        {/* Responsive grid: 2 col mobile, 3 col tablet, 4 col desktop */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 mb-8 md:mb-12">
+        {/* Responsive grid: 1 col mobile, 2 col small tablet, 3 col tablet, 4 col desktop */}
+        <div className="grid grid-cols-1 min-[400px]:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 mb-8 md:mb-12">
           {pathways.map((pathway, index) => {
             const Icon = pathway.icon
             return (
@@ -89,13 +89,13 @@ export default function CareerPathways() {
                 className="relative group cursor-pointer overflow-hidden rounded-xl md:rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 bg-white border-2 border-gray-200 hover:border-red-500"
               >
                 <div className="aspect-square p-4 sm:p-6 flex flex-col items-center justify-center text-center relative">
-                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-red-600 rounded-full flex items-center justify-center mb-3 sm:mb-4 group-hover:bg-blue-700 transition-colors duration-300 shadow-md">
+                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-red-600 rounded-full flex items-center justify-center mb-3 sm:mb-4 group-hover:bg-blue-700 transition-colors duration-300 shadow-md flex-shrink-0">
                     <Icon className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                   </div>
-                  <h3 className="text-sm sm:text-lg md:text-xl font-bold text-blue-700 mb-1 sm:mb-2 group-hover:text-red-600 transition-colors duration-300">
+                  <h3 className="text-sm sm:text-lg md:text-xl font-bold text-blue-700 mb-1 sm:mb-2 group-hover:text-red-600 transition-colors duration-300 break-words">
                     {pathway.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-gray-600 leading-relaxed break-words px-1">
                     {pathway.description}
                   </p>
                 </div>
