@@ -95,11 +95,6 @@ export default function PricingSection() {
           <p className="text-base text-text-gray mb-6">
             Whether you choose 1 week or 3 weeks, we've got you covered.
           </p>
-          <div className="flex justify-center items-center gap-4">
-            <button className="px-6 py-2 border-2 border-primary-blue-light text-primary-blue rounded-lg font-medium hover:bg-primary-blue-light hover:text-white transition-colors">
-              Compare plans
-            </button>
-          </div>
         </div>
 
         {/* Pricing Cards */}
