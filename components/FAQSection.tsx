@@ -79,21 +79,21 @@ export default function FAQSection() {
     <section id="faqs" className="bg-white section-padding">
       <div className="container-custom max-w-4xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-8">
-          <p className="text-sm font-medium text-text-gray uppercase tracking-wide mb-2">
+        <div className="text-center mb-6 sm:mb-8">
+          <p className="text-xs sm:text-sm font-medium text-text-gray uppercase tracking-wide mb-2">
             FAQS
           </p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-text-dark">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 text-text-dark">
             Frequently asked questions
           </h2>
-          <div className="space-y-1 text-base text-text-gray">
+          <div className="space-y-1 text-sm sm:text-base text-text-gray px-4">
             <p>Work experience programmes for ages 15-18 in 15 industries.</p>
             <p>Pick your career path, then choose a Weekend Programme or Summer Experience.</p>
           </div>
         </div>
 
         {/* Category Tabs */}
-        <div className="flex flex-wrap justify-center gap-4 mb-8">
+        <div className="flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-4 mb-6 sm:mb-8">
           {faqCategories.map((category) => {
             const IconComponent = category.icon;
             return (
@@ -103,14 +103,14 @@ export default function FAQSection() {
                   setActiveCategory(category.id);
                   setOpenIndex(null);
                 }}
-                className={`flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-colors ${
+                className={`flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 md:px-6 py-2 sm:py-2.5 md:py-3 rounded-lg font-medium transition-colors text-xs sm:text-sm md:text-base ${
                   activeCategory === category.id
                     ? "bg-primary-blue-light text-white border-2 border-primary-blue"
                     : "bg-white text-text-dark border-2 border-gray-200 hover:border-primary-blue-light"
                 }`}
               >
-                <IconComponent className="w-5 h-5" />
-                <span>{category.label}</span>
+                <IconComponent className="w-4 h-4 sm:w-5 sm:h-5" />
+                <span className="whitespace-nowrap">{category.label}</span>
               </button>
             );
           })}
@@ -126,16 +126,16 @@ export default function FAQSection() {
             >
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full flex items-center justify-between p-6 text-left"
+                className="w-full flex items-center justify-between p-4 sm:p-5 md:p-6 text-left"
                 aria-expanded={openIndex === index}
               >
-                <span className="font-semibold text-lg pr-4 text-text-dark">
+                <span className="font-semibold text-base sm:text-lg pr-3 sm:pr-4 text-text-dark">
                   {faq.question}
                 </span>
                 {openIndex === index ? (
-                  <X className="w-6 h-6 text-primary-blue flex-shrink-0" />
+                  <X className="w-5 h-5 sm:w-6 sm:h-6 text-primary-blue flex-shrink-0" />
                 ) : (
-                  <Plus className="w-6 h-6 text-primary-blue flex-shrink-0" />
+                  <Plus className="w-5 h-5 sm:w-6 sm:h-6 text-primary-blue flex-shrink-0" />
                 )}
               </button>
               <AnimatePresence>
@@ -147,7 +147,7 @@ export default function FAQSection() {
                     transition={{ duration: 0.3 }}
                     className="overflow-hidden"
                   >
-                    <div className="px-6 pb-6 text-text-gray leading-relaxed">
+                    <div className="px-4 sm:px-5 md:px-6 pb-4 sm:pb-5 md:pb-6 text-sm sm:text-base text-text-gray leading-relaxed">
                       {faq.answer}
                     </div>
                   </motion.div>

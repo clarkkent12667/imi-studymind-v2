@@ -113,20 +113,20 @@ export default function OurCoursesSection() {
   return (
     <section id="our-courses" className="bg-white section-padding">
       <div className="container-custom">
-        <div className="text-center mb-12">
-          <p className="text-sm font-semibold text-text-dark uppercase tracking-wide mb-2">
+        <div className="text-center mb-8 sm:mb-10 md:mb-12">
+          <p className="text-xs sm:text-sm font-semibold text-text-dark uppercase tracking-wide mb-2">
             OUR COURSES
           </p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-text-dark">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 text-text-dark">
             Our work experience programmes
           </h2>
-          <p className="text-base text-text-gray max-w-3xl mx-auto mb-8">
+          <p className="text-sm sm:text-base text-text-gray max-w-3xl mx-auto mb-6 sm:mb-8 px-4">
             Work experience programmes across 10+ industries, designed to give you a competitive edge.
           </p>
         </div>
 
         {/* Search Bar */}
-        <div className="flex justify-center mb-12">
+        <div className="flex justify-center mb-8 sm:mb-10 md:mb-12">
           <div className="relative w-full max-w-2xl">
             <input
               type="text"
@@ -136,14 +136,14 @@ export default function OurCoursesSection() {
                 setSearchQuery(e.target.value);
                 setVisibleCount(12); // Reset visible count when searching
               }}
-              className="w-full px-6 py-4 pr-12 bg-white border border-gray-200 rounded-card focus:outline-none focus:ring-2 focus:ring-primary-blue focus:border-transparent text-text-dark placeholder:text-text-gray shadow-sm"
+              className="w-full px-4 sm:px-5 md:px-6 py-3 sm:py-3.5 md:py-4 pr-10 sm:pr-12 bg-white border border-gray-200 rounded-card focus:outline-none focus:ring-2 focus:ring-primary-blue focus:border-transparent text-text-dark placeholder:text-text-gray shadow-sm text-sm sm:text-base"
             />
-            <Search className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-text-gray" />
+            <Search className="absolute right-3 sm:right-4 top-1/2 -translate-y-1/2 w-4 h-4 sm:w-5 sm:h-5 text-text-gray" />
           </div>
         </div>
 
         {/* Programme Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5 md:gap-6 mb-8">
           {displayedProgrammes.map((programme, index) => (
             <motion.div
               key={programme.id}

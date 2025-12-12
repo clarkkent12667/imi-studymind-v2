@@ -52,27 +52,27 @@ export default function TestimonialsSection() {
             className="max-w-4xl mx-auto space-y-6"
           >
             <div>
-              <p className="text-sm font-medium text-text-gray uppercase tracking-wide mb-2">
+              <p className="text-xs sm:text-sm font-medium text-text-gray uppercase tracking-wide mb-2">
                 EXPERTS
               </p>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-text-dark mb-6">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-text-dark mb-4 sm:mb-5 md:mb-6">
                 Learn from industry experts
               </h2>
-              <p className="text-lg text-text-gray leading-relaxed">
+              <p className="text-base sm:text-lg text-text-gray leading-relaxed">
                 Blending practical knowledge, industry visits and project-based learning, we offer an exceptional enrichment experience. Learning from those at the forefront of their field, students receive industry feedback and personal career coaching to prepare them for an exciting future in their chosen field.
               </p>
             </div>
           </motion.div>
 
           {/* Testimonials Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 md:gap-6">
             {testimonials.map((testimonial, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
-                className="relative h-80 rounded-card overflow-hidden group"
+                className="relative h-72 sm:h-80 md:h-96 rounded-card overflow-hidden group"
               >
                 {/* Background Image with Blur */}
                 <div className="absolute inset-0">
@@ -90,12 +90,12 @@ export default function TestimonialsSection() {
                 <div className="absolute left-0 top-0 bottom-0 w-2 bg-primary-blue" />
 
                 {/* Content Overlay */}
-                <div className="relative h-full flex flex-col justify-center p-8 text-white">
-                  <p className="text-lg md:text-xl leading-relaxed mb-6">
-                    <span className="text-4xl leading-none mr-2">"</span>
+                <div className="relative h-full flex flex-col justify-center p-4 sm:p-6 md:p-8 text-white">
+                  <p className="text-base sm:text-lg md:text-xl leading-relaxed mb-4 sm:mb-6">
+                    <span className="text-3xl sm:text-4xl leading-none mr-1 sm:mr-2">"</span>
                     {testimonial.quote}
                   </p>
-                  <p className="font-semibold text-lg">
+                  <p className="font-semibold text-base sm:text-lg">
                     {testimonial.name}, {testimonial.programme}
                   </p>
                 </div>

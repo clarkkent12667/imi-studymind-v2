@@ -25,6 +25,11 @@ export default function Header() {
     }
   }
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+    setIsMenuOpen(false)
+  }
+
   return (
     <>
       <header
@@ -33,7 +38,11 @@ export default function Header() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between py-3 sm:py-4">
             {/* Logos - Horizontal layout with proper spacing */}
-            <div className="flex items-center gap-1 sm:gap-1.5 sm:gap-2 md:gap-3 flex-shrink-0 min-w-0 max-w-[calc(100%-60px)] sm:max-w-none overflow-hidden">
+            <button
+              onClick={scrollToTop}
+              className="flex items-center gap-1 sm:gap-1.5 sm:gap-2 md:gap-3 flex-shrink-0 min-w-0 max-w-[calc(100%-60px)] sm:max-w-none overflow-hidden cursor-pointer hover:opacity-80 transition-opacity"
+              aria-label="Scroll to top"
+            >
               <img 
                 src="/IMI Logo - Booklets.png" 
                 alt="Improve ME Institute Logo" 
@@ -53,7 +62,7 @@ export default function Header() {
                 width="auto"
                 height="auto"
               />
-            </div>
+            </button>
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center gap-6">

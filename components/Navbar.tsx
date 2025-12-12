@@ -34,31 +34,43 @@ export default function Navbar() {
     setIsMobileMenuOpen(false);
   };
 
+  const handleLogoClick = () => {
+    const element = document.querySelector("#home");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+    setIsMobileMenuOpen(false);
+  };
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
-      <div className="max-w-[1920px] mx-auto px-6 xl:px-8">
-        <div className="flex items-center justify-between h-16 md:h-20 min-h-[64px]">
+      <div className="max-w-[1920px] mx-auto px-4 sm:px-5 md:px-6 xl:px-8">
+        <div className="flex items-center justify-between h-14 sm:h-16 md:h-20 min-h-[56px] sm:min-h-[64px]">
           {/* Logo Section - Left */}
           <div className="flex items-center flex-shrink-0 min-w-0">
-            <div className="flex items-center gap-2 md:gap-3 flex-shrink-0">
+            <button
+              onClick={handleLogoClick}
+              className="flex items-center gap-2 md:gap-3 flex-shrink-0 cursor-pointer hover:opacity-80 transition-opacity"
+              aria-label="Scroll to top"
+            >
               <Image
                 src="/logo/IMI Logo - Booklets.png"
                 alt="Improve ME Institute Logo"
                 width={120}
                 height={40}
-                className="h-8 md:h-10 w-auto object-contain flex-shrink-0"
+                className="h-8 sm:h-9 md:h-10 lg:h-12 w-auto object-contain flex-shrink-0"
                 priority
               />
-              <div className="h-8 md:h-10 w-px bg-gray-400 hidden md:block flex-shrink-0"></div>
+              <div className="h-8 sm:h-9 md:h-10 lg:h-12 w-px bg-gray-400 hidden sm:block flex-shrink-0"></div>
               <Image
                 src="/logo/study-mind-png-long-logo.png"
                 alt="Study Mind Logo"
                 width={150}
                 height={40}
-                className="h-8 md:h-10 w-auto object-contain flex-shrink-0"
+                className="h-8 sm:h-9 md:h-10 lg:h-12 w-auto object-contain flex-shrink-0"
                 priority
               />
-            </div>
+            </button>
           </div>
 
           {/* Navigation Menu - Center (Only visible on xl: 1280px+) */}
@@ -92,7 +104,7 @@ export default function Navbar() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={handleBookNow}
-              className="bg-primary-blue-dark text-white px-4 md:px-6 py-2 md:py-2.5 rounded-button font-bold text-xs md:text-sm hover:bg-primary-blue transition-all shadow-md whitespace-nowrap flex-shrink-0"
+              className="bg-primary-blue-dark text-white px-3 sm:px-4 md:px-6 py-1.5 sm:py-2 md:py-2.5 rounded-button font-bold text-xs sm:text-sm hover:bg-primary-blue transition-all shadow-md whitespace-nowrap flex-shrink-0"
             >
               Book Now
             </motion.button>

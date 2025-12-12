@@ -26,13 +26,14 @@ export default function WhyChooseSection() {
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6 }}
-            className="relative h-[500px] rounded-2xl overflow-hidden"
+            className="relative h-[300px] sm:h-[400px] md:h-[450px] lg:h-[500px] rounded-2xl overflow-hidden"
           >
             <Image
-              src="/Work experience/why-choose-us-1.webp"
+              src="/why choose us/DW4A3864.JPG"
               alt="Students in professional setting"
               fill
               quality={100}
+              priority
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"
               unoptimized={true}
@@ -47,26 +48,26 @@ export default function WhyChooseSection() {
             className="space-y-8"
           >
             <div>
-              <p className="text-sm font-semibold text-primary-blue uppercase tracking-wide mb-2">
+              <p className="text-xs sm:text-sm font-semibold text-primary-blue uppercase tracking-wide mb-2">
                 WHY CHOOSE US?
               </p>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4">
                 Immersive Work Experience
               </h2>
-              <p className="text-lg text-text-gray">
+              <p className="text-base sm:text-lg text-text-gray">
                 Improve ME Institute, in collaboration with Study Mind UK, offers work experience programmes trusted by 100s of students each year.
               </p>
             </div>
 
             {/* Stats Grid */}
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-2 gap-4 sm:gap-6">
               {stats.map((stat, index) => (
                 <motion.div
                   key={stat.label}
                   initial={{ opacity: 0, y: 20 }}
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.4, delay: 0.2 + index * 0.1 }}
-                  className="bg-white p-6 rounded-card border border-blue-100"
+                  className="bg-white p-4 sm:p-5 md:p-6 rounded-card border border-blue-100"
                 >
                   <StatsCounter
                     value={stat.value}

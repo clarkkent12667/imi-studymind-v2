@@ -79,15 +79,15 @@ export default function BookingForm() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          className="text-center mb-8 sm:mb-10 md:mb-12"
         >
-          <p className="text-sm font-semibold text-primary-blue uppercase tracking-wide mb-2">
+          <p className="text-xs sm:text-sm font-semibold text-primary-blue uppercase tracking-wide mb-2">
             BOOK YOUR PLACE
           </p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-text-dark">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 text-text-dark">
             Reserve Your Spot for 2026
           </h2>
-          <p className="text-lg text-text-gray max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-text-gray max-w-2xl mx-auto px-4">
             Get in touch with us to book your work experience programme. Our team will respond within 24 hours.
           </p>
         </motion.div>
@@ -96,9 +96,9 @@ export default function BookingForm() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="bg-white rounded-card shadow-card p-8 md:p-12"
+          className="bg-white rounded-card shadow-card p-4 sm:p-6 md:p-8 lg:p-12"
         >
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5 md:space-y-6">
             {/* Student Name */}
             <div>
               <label htmlFor="studentName" className="block text-sm font-semibold text-text-dark mb-2">
@@ -140,7 +140,7 @@ export default function BookingForm() {
             </div>
 
             {/* Email and Phone Row */}
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 md:gap-6">
               <div>
                 <label htmlFor="email" className="block text-sm font-semibold text-text-dark mb-2">
                   Email Address <span className="text-primary-blue">*</span>
@@ -181,7 +181,7 @@ export default function BookingForm() {
             </div>
 
             {/* Age and Programme Row */}
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 md:gap-6">
               <div>
                 <label htmlFor="age" className="block text-sm font-semibold text-text-dark mb-2">
                   Age/Grade <span className="text-primary-blue">*</span>
@@ -245,7 +245,7 @@ export default function BookingForm() {
               disabled={isSubmitting}
               whileHover={{ scale: isSubmitting ? 1 : 1.02 }}
               whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
-              className="w-full bg-primary-blue text-white px-8 py-4 rounded-button font-bold text-lg hover:bg-primary-blue-light transition-colors shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+              className="w-full bg-primary-blue text-white px-6 sm:px-8 py-3 sm:py-3.5 md:py-4 rounded-button font-bold text-base sm:text-lg hover:bg-primary-blue-light transition-colors shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
             >
               {isSubmitting ? (
                 <>

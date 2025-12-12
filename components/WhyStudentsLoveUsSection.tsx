@@ -59,10 +59,10 @@ export default function WhyStudentsLoveUsSection() {
             className="space-y-8"
           >
             <div>
-              <p className="text-sm font-medium text-text-gray uppercase tracking-wide mb-2">
+              <p className="text-xs sm:text-sm font-medium text-text-gray uppercase tracking-wide mb-2">
                 SAFETY
               </p>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-text-dark">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-text-dark">
                 Why students feel safe and supported
               </h2>
             </div>
@@ -100,7 +100,7 @@ export default function WhyStudentsLoveUsSection() {
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6 }}
-            className="grid grid-cols-2 gap-4"
+            className="grid grid-cols-2 gap-3 sm:gap-4"
           >
             {images.map((image, i) => (
               <motion.div
@@ -108,7 +108,7 @@ export default function WhyStudentsLoveUsSection() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={isInView ? { opacity: 1, scale: 1 } : {}}
                 transition={{ duration: 0.4, delay: 0.2 + i * 0.1 }}
-                className="relative h-64 rounded-card overflow-hidden"
+                className="relative h-48 sm:h-56 md:h-64 rounded-card overflow-hidden"
               >
                 <Image
                   src={image.src}

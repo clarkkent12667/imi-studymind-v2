@@ -10,6 +10,10 @@ export default function Footer() {
     }
   }
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
   return (
     <footer className="bg-blue-900 text-white py-8 sm:py-10 md:py-12">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
@@ -17,7 +21,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-6 sm:mb-8">
           {/* Column 1: Logos & Description */}
           <div className="text-center sm:text-left">
-            <div className="flex flex-col items-center sm:items-start gap-3 mb-4">
+            <button
+              onClick={scrollToTop}
+              className="flex flex-col items-center sm:items-start gap-3 mb-4 cursor-pointer hover:opacity-80 transition-opacity"
+              aria-label="Scroll to top"
+            >
               <div className="bg-white p-2 rounded-lg">
                 <img 
                   src="/IMI Logo - Booklets.png" 
@@ -39,7 +47,7 @@ export default function Footer() {
                   height="auto"
                 />
               </div>
-            </div>
+            </button>
             <p className="text-sm text-white/80 break-words">
               Transforming futures through elite career education experiences at UCL London.
             </p>
