@@ -45,18 +45,8 @@ export default function HeroSection() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight"
             >
-              Explore 2026 Improve ME Institute Work Experience Programmes
+              Explore 2026 Improve ME Institute Work Experience Programmes in Collaboration with Study Mind UK
             </motion.h1>
-
-            {/* Subheading */}
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-lg md:text-xl lg:text-2xl text-white/90 font-medium"
-            >
-              In collaboration with Study Mind UK - Discover Your Future Career, Here To
-            </motion.p>
 
             {/* CTA Button */}
             <motion.div

@@ -85,7 +85,6 @@ export default function PerfectForAllSection() {
                 <p className="text-sm text-text-dark mb-2 italic">
                   "Our tutor was amazing. He knew the answer to every question that you could think of about engineering, and knew about everyone's subjects"
                 </p>
-                <p className="text-xs font-medium text-text-gray">Improve ME Institute student</p>
               </div>
             </div>
           </motion.div>

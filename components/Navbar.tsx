@@ -49,9 +49,7 @@ export default function Navbar() {
                 className="h-8 md:h-10 w-auto object-contain flex-shrink-0"
                 priority
               />
-              <span className="text-gray-600 text-xs md:text-sm font-medium whitespace-nowrap hidden md:inline flex-shrink-0">
-                in collaboration with
-              </span>
+              <div className="h-8 md:h-10 w-px bg-gray-400 hidden md:block flex-shrink-0"></div>
               <Image
                 src="/logo/study-mind-png-long-logo.png"
                 alt="Study Mind Logo"

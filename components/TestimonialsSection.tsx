@@ -59,7 +59,7 @@ export default function TestimonialsSection() {
                 Learn from industry experts
               </h2>
               <p className="text-lg text-text-gray leading-relaxed">
-                Blending practical knowledge, industry visits and project-based learning, Improve ME Institute, in collaboration with Study Mind Camps, offers an exceptional enrichment experience. Learning from those at the forefront of their field, students receive industry feedback and personal career coaching to prepare them for an exciting future in their chosen field.
+                Blending practical knowledge, industry visits and project-based learning, we offer an exceptional enrichment experience. Learning from those at the forefront of their field, students receive industry feedback and personal career coaching to prepare them for an exciting future in their chosen field.
               </p>
             </div>
           </motion.div>
