@@ -15,9 +15,9 @@ const heroImages = [
 
 export default function HeroSection() {
   return (
-    <section id="home" className="relative overflow-hidden">
+    <section id="home" className="relative overflow-hidden w-full">
       {/* Top Hero Section - Deep Blue */}
-      <div className="relative bg-gradient-to-br from-primary-blue-dark via-primary-blue to-primary-blue-dark text-white pt-20 pb-12 sm:pt-24 sm:pb-16 md:pt-28 md:pb-20 lg:pt-32 lg:pb-24">
+      <div className="relative bg-gradient-to-br from-primary-blue-dark via-primary-blue to-primary-blue-dark text-white pt-20 pb-12 sm:pt-24 sm:pb-16 md:pt-28 md:pb-20 lg:pt-32 lg:pb-24 w-full overflow-x-hidden">
         {/* Background Geometric Shapes */}
         <div className="absolute left-4 top-16 sm:left-10 sm:top-20 w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 opacity-20">
           <svg viewBox="0 0 100 100" className="w-full h-full text-primary-blue-light">
@@ -43,7 +43,8 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold leading-tight px-2"
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold leading-tight px-2 break-words"
+              style={{ wordBreak: 'break-word', overflowWrap: 'anywhere' }}
             >
               Explore 2026 Improve ME Institute Work Experience Programmes in Collaboration with Study Mind UK
             </motion.h1>
@@ -53,7 +54,7 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4 pt-2 sm:pt-4 px-4"
+              className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4 pt-2 sm:pt-4 px-4 w-full"
             >
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -77,10 +78,20 @@ export default function HeroSection() {
                     element.scrollIntoView({ behavior: "smooth", block: "start" });
                   }
                 }}
-                className="w-full sm:w-auto bg-transparent border-2 border-white text-white px-8 sm:px-10 md:px-12 py-3 sm:py-3.5 md:py-4 rounded-button font-bold text-base sm:text-lg md:text-xl hover:bg-white hover:text-primary-blue-dark transition-all shadow-lg hover:shadow-xl"
+                className="hidden sm:block w-full sm:w-auto bg-transparent border-2 border-white text-white px-8 sm:px-10 md:px-12 py-3 sm:py-3.5 md:py-4 rounded-button font-bold text-base sm:text-lg md:text-xl hover:bg-white hover:text-primary-blue-dark transition-all shadow-lg hover:shadow-xl"
               >
                 Contact Us to Learn More
               </motion.button>
+              <motion.a
+                href="https://studymind.co.uk/work-experience/"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="w-full sm:w-auto bg-transparent border-2 border-white text-white px-8 sm:px-10 md:px-12 py-3 sm:py-3.5 md:py-4 rounded-button font-bold text-base sm:text-lg md:text-xl hover:bg-white hover:text-primary-blue-dark transition-all shadow-lg hover:shadow-xl"
+              >
+                Learn More
+              </motion.a>
             </motion.div>
 
             {/* Image Grid */}
@@ -88,7 +99,7 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
-              className="grid grid-cols-3 gap-2 sm:gap-3 md:gap-4 max-w-4xl mx-auto pt-8 sm:pt-10 md:pt-12 px-4 sm:px-0"
+              className="grid grid-cols-3 gap-2 sm:gap-3 md:gap-4 max-w-4xl mx-auto pt-8 sm:pt-10 md:pt-12 px-4 sm:px-0 w-full overflow-hidden"
             >
               {heroImages.map((image, index) => (
                 <motion.div

@@ -33,10 +33,10 @@ export default function Header() {
   return (
     <>
       <header
-        className="sticky top-0 z-50 bg-white shadow-md"
+        className="sticky top-0 z-50 bg-white shadow-md overflow-x-hidden w-full max-w-[100vw] box-border"
       >
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between py-3 sm:py-4">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-full box-border overflow-x-hidden">
+          <div className="flex items-center justify-between py-3 sm:py-4 w-full max-w-full box-border">
             {/* Logos - Horizontal layout with proper spacing */}
             <button
               onClick={scrollToTop}
@@ -65,7 +65,7 @@ export default function Header() {
             </button>
 
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center gap-6">
+            <nav className="hidden md:flex items-center gap-6 box-border overflow-x-hidden">
               <button
                 onClick={() => scrollToSection('benefits')}
                 className="text-gray-700 hover:text-blue-700 font-medium transition-colors py-2 px-3"
@@ -136,7 +136,7 @@ export default function Header() {
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'tween', duration: 0.3 }}
-              className="fixed top-0 right-0 bottom-0 w-80 max-w-[85vw] bg-white shadow-2xl z-50 md:hidden overflow-y-auto"
+              className="fixed top-0 right-0 bottom-0 w-80 max-w-[85vw] bg-white shadow-2xl z-50 md:hidden overflow-y-auto box-border"
             >
               <div className="p-6">
                 {/* Close button */}
