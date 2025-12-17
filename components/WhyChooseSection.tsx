@@ -2,10 +2,10 @@ import Image from "next/image";
 
 export default function WhyChooseSection() {
   const stats = [
-    { value: 1000, suffix: "", label: "Happy Alumni" },
+    { value: 1000, suffix: "", label: "Alumni" },
     { value: 50, suffix: "+", label: "Nations represented" },
-    { value: 10, suffix: " YEARS", label: "Excellence of" },
-    { value: 98, suffix: "%", label: "Recommended" },
+    { value: 10, suffix: " Years", label: "Of Successful Delivery" },
+    { value: 98, suffix: "%", label: "Referral Rate" },
   ];
 
   return (
@@ -32,10 +32,10 @@ export default function WhyChooseSection() {
                 WHY CHOOSE US?
               </p>
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4">
-                Immersive Work Experience
+                Work experience programmes
               </h2>
               <p className="text-base sm:text-lg text-text-gray">
-                Improve ME Institute, in collaboration with Study Mind UK, offers work experience programmes trusted by 100s of students each year.
+                Trusted by 100s of students each year.
               </p>
             </div>
 

@@ -37,7 +37,9 @@ export default function HeroSection() {
           <div className="text-center max-w-5xl mx-auto space-y-6 sm:space-y-8">
             {/* Main Heading */}
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold leading-tight px-2 break-words">
-              Explore 2026 Improve ME Institute Work Experience Programmes in Collaboration with Study Mind UK
+              2026 Work Experience Programmes
+              <br />
+              Offered by Improve ME Institute in Collaboration with Study Mind UK
             </h1>
 
             {/* CTA Buttons */}
