@@ -3,7 +3,8 @@ import { Brain, Zap, Crown } from "lucide-react";
 const pricingTiers = [
   {
     name: "Rising Talent",
-    price: "AED 8,995.00",
+    priceAED: "AED 8,995.00",
+    priceGBP: "£1,799.00",
     weeks: "1 week",
     description: "Kickstart your career with confidence",
     icon: Brain,
@@ -18,7 +19,8 @@ const pricingTiers = [
   },
   {
     name: "Career Explorer",
-    price: "AED 14,995.00",
+    priceAED: "AED 14,995.00",
+    priceGBP: "£2,999.00",
     weeks: "2 weeks",
     description: "Your path towards your dream career",
     icon: Brain,
@@ -33,7 +35,8 @@ const pricingTiers = [
   },
   {
     name: "Future Leader",
-    price: "AED 19,995.00",
+    priceAED: "AED 19,995.00",
+    priceGBP: "£3,999.00",
     weeks: "3 weeks",
     description: "Build a solid foundation for a brighter future",
     icon: Crown,
@@ -133,11 +136,13 @@ export default function PricingSection() {
                     {tier.name}
                   </h3>
                   <div className="mb-2 sm:mb-3">
-                    <span className={`text-3xl sm:text-4xl font-bold ${
+                    <div className={`text-3xl sm:text-4xl font-bold ${
                       tier.popular ? "text-white" : "text-text-dark"
                     }`}>
-                      {tier.price}
-                    </span>
+                      <span>{tier.priceAED}</span>
+                      <span className="mx-2 opacity-70">/</span>
+                      <span className="text-2xl sm:text-3xl">{tier.priceGBP}</span>
+                    </div>
                   </div>
                   <p className={`text-sm sm:text-base ${
                     tier.popular ? "text-white/90" : "text-text-gray"

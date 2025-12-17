@@ -1,71 +1,137 @@
 "use client";
 
 import { useState } from "react";
-import { GraduationCap, Building2, Heart, Brain, Plus, X } from "lucide-react";
+import { GraduationCap, Building2, Heart, Plus, X, Calendar, MapPin, Users } from "lucide-react";
 
 const faqCategories = [
   {
-    id: "academic",
-    label: "Academic excellence",
-    icon: GraduationCap,
-  },
-  {
-    id: "beyond",
-    label: "Beyond classroom",
+    id: "work-experience",
+    label: "Work Experience & Activities",
     icon: Building2,
   },
   {
-    id: "safety",
-    label: "Safety & support",
+    id: "programme-structure",
+    label: "Programme Structure",
+    icon: Calendar,
+  },
+  {
+    id: "location-accommodation",
+    label: "Location & Accommodation",
+    icon: MapPin,
+  },
+  {
+    id: "support-safety",
+    label: "Support & Safety",
     icon: Heart,
   },
   {
-    id: "why",
-    label: "Why Choose Us?",
-    icon: Brain,
+    id: "career-benefits",
+    label: "Career & Academic Benefits",
+    icon: GraduationCap,
+  },
+  {
+    id: "social-cultural",
+    label: "Social & Cultural",
+    icon: Users,
   },
 ];
 
 const allFaqs = [
+  // Work Experience & Activities
   {
-    question: "How many students are in a group?",
-    answer: "We maintain small group sizes of 12-15 students for personalized attention and optimal learning experiences.",
-    category: "academic",
+    question: "What does students' work experience actually involve?",
+    answer: "Students take part in a blend of practical classroom workshops and off-site industry visits. Each programme is designed to show what working in a chosen field really looks like, combining applied tasks, professional insight and real environments.",
+    category: "work-experience",
   },
   {
-    question: "Does Improve ME Institute have a bursary scheme?",
-    answer: "Yes, Improve ME Institute offers bursary schemes to support students who may need financial assistance. Please contact us for more information about eligibility and application processes.",
-    category: "academic",
+    question: "What kind of companies and organisations do students visit?",
+    answer: "Visits vary by career area but include leading firms and institutions across London. Examples include global organisations such as EY and Lloyds, specialist training centres like the London Academy of Trading, well-known legal institutions, healthcare settings, engineering labs and industrial sites.",
+    category: "work-experience",
   },
   {
-    question: "How is the content delivered, and will I receive any formal certification?",
-    answer: "Content is delivered through hands-on workshops, industry visits, and practical sessions. Upon completion, you will receive a formal certificate of completion that can enhance your UCAS applications.",
-    category: "academic",
+    question: "What types of workshops do students take part in?",
+    answer: "Workshops are highly interactive and career-focused. Depending on the programme, students may practise clinical skills such as suturing, run business simulations like a Dragon's Den start-up challenge, code elements of a driverless car, build engineering structures, or carry out supervised laboratory experiments.",
+    category: "work-experience",
   },
   {
-    question: "Will Improve ME Institute's work experience programmes help with my university applications?",
-    answer: "Absolutely! Our programmes provide valuable experiences, certificates, and UCAS application support that can significantly strengthen your university applications and personal statements.",
-    category: "academic",
+    question: "Is the experience mainly classroom-based or hands-on?",
+    answer: "The camps are very hands-on. Classroom learning is practical rather than lecture-led, and off-site visits allow students to see how theory is applied in real professional settings.",
+    category: "work-experience",
   },
   {
-    question: "Who are Improve ME Institute's work experience programmes run by?",
-    answer: "Our programmes are run by industry professionals and experts from leading companies and universities, ensuring you receive authentic, real-world insights into your chosen career path.",
-    category: "beyond",
+    question: "Will students interact with real professionals?",
+    answer: "Yes. Students regularly engage with professionals during company visits, guest workshops and simulations. This might include industry specialists, healthcare professionals, legal practitioners or public-sector experts such as police officers.",
+    category: "work-experience",
+  },
+  // Programme Structure
+  {
+    question: "How long can students attend for?",
+    answer: "Students can choose to attend for one, two or three weeks, depending on how much exposure and depth they want. The 2-3 week programmes are highly recommended.",
+    category: "programme-structure",
   },
   {
-    question: "What safety measures are in place?",
-    answer: "All staff are DBS-checked and first-aid trained. We have dedicated leaders available 24/7 to ensure students feel safe, happy, and well-supported throughout their experience.",
-    category: "safety",
+    question: "When does accommodation check-in and check-out take place?",
+    answer: "Arrival is on the Sunday before the programme begins, where students will be welcomed by the team. Check-out is on the Friday after the programme finishes. Additional nights can be arranged on request, subject to availability.",
+    category: "programme-structure",
   },
   {
-    question: "What makes Improve ME Institute different?",
-    answer: "Improve ME Institute, in collaboration with Study Mind UK, offers immersive, hands-on work experience programmes with industry professionals, providing authentic career insights and practical skills that go beyond traditional classroom learning.",
-    category: "why",
+    question: "What happens over the weekend if a student books multiple weeks?",
+    answer: "Students staying for two or three weeks on the residential programme will take part in organised weekend activities. Past weekends have included trips to Cambridge, London shopping and sightseeing experiences. Final details are shared closer to the programme start date. Students who are not staying in accommodation will finish their programme on Friday.",
+    category: "programme-structure",
+  },
+  {
+    question: "Can students attend non-consecutive weeks?",
+    answer: "Yes. Students are welcome to book weeks that are not back-to-back, allowing flexibility around other commitments. Our team is happy to help with planning if needed.",
+    category: "programme-structure",
+  },
+  // Location & Accommodation
+  {
+    question: "Where does the programme take place?",
+    answer: "The programme is based in Central London, with sessions delivered in teaching spaces, university facilities and professional workplaces across the city.",
+    category: "location-accommodation",
+  },
+  {
+    question: "Do students stay in university accommodation?",
+    answer: "Residential students stay in single rooms at UCL accommodation, with meals provided and staff available around the clock. The location is in Ramsay Hall, a University College London residence. Accommodation is in single rooms with shared bathroom facilities, with male and female students accommodated on separate floors.",
+    category: "location-accommodation",
+  },
+  // Support & Safety
+  {
+    question: "Who leads and supports the students during the programme?",
+    answer: "Students are supported by experienced tutors and mentors, including current students from top UK universities such as Oxford, Cambridge, UCL and LSE, alongside on-site staff.",
+    category: "support-safety",
+  },
+  {
+    question: "How is student safety managed?",
+    answer: "Safeguarding is a priority. All staff are DBS-checked, students are supervised at all times, and 24/7 pastoral support is in place for residential students.",
+    category: "support-safety",
+  },
+  {
+    question: "Does ImproveMe x Study Mind offer support after the programme finishes?",
+    answer: "Yes. Students can access continued academic support, personal statement guidance and university admissions mentoring beyond the programme.",
+    category: "support-safety",
+  },
+  // Career & Academic Benefits
+  {
+    question: "How does this help students decide on future study or careers?",
+    answer: "By experiencing both the academic and practical sides of a career, students gain clarity about what suits them. This reduces uncertainty when choosing A-levels, degree courses or long-term career paths.",
+    category: "career-benefits",
+  },
+  {
+    question: "Will students receive anything they can use for applications?",
+    answer: "Students receive a completion certificate and a professional recommendation, which can be referenced in UCAS applications, CVs and interviews.",
+    category: "career-benefits",
+  },
+  // Social & Cultural
+  {
+    question: "Is there a social and cultural element?",
+    answer: "Yes. Alongside academic sessions, students take part in organised evening activities and cultural experiences in London, helping them build independence and confidence. Activities include park sports days, theatre visits, boat tours on River Thames, bowling, visit to China town and more.",
+    category: "social-cultural",
   },
 ];
 
 export default function FAQSection() {
-  const [activeCategory, setActiveCategory] = useState("academic");
+  const [activeCategory, setActiveCategory] = useState("work-experience");
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const filteredFaqs = allFaqs.filter((faq) => faq.category === activeCategory);
