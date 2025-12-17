@@ -92,77 +92,80 @@ export default function PricingSection() {
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7 md:gap-8 max-w-6xl mx-auto items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7 md:gap-8 max-w-6xl mx-auto items-stretch">
           {pricingTiers.map((tier, index) => {
             const IconComponent = tier.icon;
             return (
               <div
                 key={tier.name}
-                className={`relative rounded-card p-6 sm:p-7 md:p-8 shadow-md flex flex-col h-full ${
+                className={`relative rounded-card p-6 sm:p-7 md:p-8 shadow-md flex flex-col h-full overflow-hidden ${
                   tier.popular
                     ? "bg-gradient-to-br from-primary-blue to-primary-blue-light text-white ring-2 ring-primary-blue/20"
                     : "bg-white text-text-dark"
                 }`}
               >
                 {/* Week Badge */}
-                <div className="absolute top-3 right-3 sm:top-4 sm:right-4 bg-accent-orange text-white px-2 sm:px-3 py-1 rounded-full text-xs font-semibold">
+                <div className="absolute top-3 right-3 sm:top-4 sm:right-4 bg-accent-orange text-white px-2 sm:px-3 py-1 rounded-full text-xs font-semibold z-10">
                   {tier.weeks}
                 </div>
 
                 {/* Most Popular Badge */}
                 {tier.popular && (
-                  <div className="absolute top-3 left-3 sm:top-4 sm:left-4 flex items-center gap-1.5 sm:gap-2">
-                    <Zap className="w-3 h-3 sm:w-4 sm:h-4" />
-                    <span className="text-xs sm:text-sm font-semibold">Most popular</span>
+                  <div className="absolute top-3 left-3 sm:top-4 sm:left-4 flex items-center gap-1.5 sm:gap-2 z-10">
+                    <Zap className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
+                    <span className="text-xs sm:text-sm font-semibold text-white">Most popular</span>
                   </div>
                 )}
 
                 {/* Icon */}
-                <div className="flex justify-center mb-4 sm:mb-5 md:mb-6 mt-6 sm:mt-7 md:mt-8">
-                  <div className={`p-3 sm:p-3.5 md:p-4 rounded-full ${
+                <div className="flex justify-center mb-5 sm:mb-6 mt-8 sm:mt-10">
+                  <div className={`w-16 h-16 sm:w-20 sm:h-20 md:w-20 md:h-20 flex items-center justify-center rounded-full flex-shrink-0 ${
                     tier.popular ? "bg-white/20" : "bg-primary-blue/10"
                   }`}>
-                    <IconComponent className={`w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 ${
+                    <IconComponent className={`w-8 h-8 sm:w-10 sm:h-10 md:w-10 md:h-10 ${
                       tier.popular ? "text-white" : "text-primary-blue"
                     }`} />
                   </div>
                 </div>
 
                 {/* Content */}
-                <div className="text-center mb-4 sm:mb-5 md:mb-6">
-                  <h3 className={`text-xl sm:text-2xl font-bold mb-2 sm:mb-3 ${
+                <div className="text-center mb-5 sm:mb-6 px-2">
+                  <h3 className={`text-xl sm:text-2xl font-bold mb-3 sm:mb-4 ${
                     tier.popular ? "text-white" : "text-text-dark"
                   }`}>
                     {tier.name}
                   </h3>
-                  <div className="mb-2 sm:mb-3">
-                    <div className={`text-3xl sm:text-4xl font-bold ${
+                  <div className="mb-3 sm:mb-4">
+                    <div className={`text-2xl sm:text-3xl md:text-4xl font-bold leading-tight ${
                       tier.popular ? "text-white" : "text-text-dark"
                     }`}>
-                      <span>{tier.priceAED}</span>
-                      <span className="mx-2 opacity-70">/</span>
-                      <span className="text-2xl sm:text-3xl">{tier.priceGBP}</span>
+                      <div className="break-words">
+                        {tier.priceAED}
+                      </div>
+                      <div className={`text-lg sm:text-xl md:text-2xl mt-1 ${tier.popular ? "text-white/95" : "text-text-gray"}`}>
+                        ({tier.priceGBP})
+                      </div>
                     </div>
                   </div>
-                  <p className={`text-sm sm:text-base ${
-                    tier.popular ? "text-white/90" : "text-text-gray"
+                  <p className={`text-sm sm:text-base leading-relaxed ${
+                    tier.popular ? "text-white/95" : "text-text-gray"
                   }`}>
                     {tier.description}
                   </p>
                 </div>
 
                 {/* Features List */}
-                <ul className="space-y-2 flex-1">
+                <ul className="space-y-2.5 sm:space-y-3 flex-1 mb-5 sm:mb-6 px-2">
                   {tier.features.map((feature, idx) => (
                     <li
                       key={idx}
-                      className={`text-sm ${
+                      className={`text-sm sm:text-base leading-relaxed ${
                         idx === 0
                           ? tier.popular
                             ? "text-white font-semibold"
                             : "text-text-dark font-semibold"
                           : tier.popular
-                            ? "text-white/90"
+                            ? "text-white/95"
                             : "text-text-gray"
                       }`}
                     >
@@ -172,16 +175,18 @@ export default function PricingSection() {
                 </ul>
 
                 {/* Button (Pinned to bottom for alignment) */}
-                <a
-                  href="#booking"
-                  className={`w-full flex items-center justify-center text-center px-5 sm:px-6 py-2.5 sm:py-3 rounded-lg font-semibold mt-5 sm:mt-6 transition-colors text-sm sm:text-base shadow-sm hover:shadow ${
-                    tier.popular
-                      ? "bg-white text-primary-blue hover:bg-white/90"
-                      : "bg-white border-2 border-primary-blue/30 text-primary-blue hover:bg-primary-blue/5 hover:border-primary-blue/50"
-                  }`}
-                >
-                  Book Now
-                </a>
+                <div className="mt-auto px-2">
+                  <a
+                    href="#booking"
+                    className={`w-full flex items-center justify-center text-center px-5 sm:px-6 py-3 sm:py-3.5 rounded-lg font-semibold transition-colors text-sm sm:text-base shadow-sm hover:shadow-md ${
+                      tier.popular
+                        ? "bg-white text-primary-blue hover:bg-white/95"
+                        : "bg-primary-blue text-white hover:bg-primary-blue-light border-2 border-primary-blue"
+                    }`}
+                  >
+                    Book Now
+                  </a>
+                </div>
               </div>
             );
           })}
